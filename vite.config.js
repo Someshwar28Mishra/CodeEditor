@@ -5,4 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base:"/codeEditor",
   plugins: [react()],
+  server: {
+    host: '0.0.0.0', // Bind to all network interfaces
+    port: process.env.PORT || 5173, // Use Render's PORT or default to 5173
+  },
 })
